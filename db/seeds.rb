@@ -1,8 +1,9 @@
 User.create!(first_name: "Trần",
   last_name: "Văn Sáng",
   email: "vansang10a6txqt@gmail.com",
-  password: "vansang",
-  password_confirmation: "vansang",
+  password: "vansang12",
+  password_confirmation: "vansang12",
+  phone: "0349934988",
   role: 1,
   activated_at: Time.zone.now)
 
@@ -10,10 +11,12 @@ User.create!(first_name: "Trần",
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  User.create!(first_name: name,
+  User.create!(first_name: name, 
+    last_name: "sang",
     email: email,
     password: password,
     password_confirmation: password,
+    phone: "0349934988",
     activated_at: Time.zone.now)
 end
 

@@ -8,6 +8,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "config"
 gem "faker", "2.1.2"
+gem "figaro"
 gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
