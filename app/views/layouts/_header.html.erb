@@ -18,9 +18,18 @@
             <li class="nav-item">
               <%= link_to t("layouts.header.help"), static_pages_help_path, class: "nav-link" %>
             </li>
-            <li>
-              <%= link_to t("static_pages.login"), "#", class: "nav-link" %>
-            </li>
+            <% if logged_in? %>
+              <li>
+                <%= link_to t("users.profile"), current_user, class: "nav-link" %>
+              </li>
+              <li>
+              <%= link_to t("users.log_out"), logout_path, method: :delete, class: "nav-link" %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to t("static_pages.login"), login_path, class: "nav-link" %>
+              </li>
+            <% end %>            
             <li>
               <%= link_to t("users.sign_up"), signup_path, class: "nav-link" %>
             </li>
