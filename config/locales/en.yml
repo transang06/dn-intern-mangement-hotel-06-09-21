@@ -2,6 +2,8 @@ en:
   english: "English"
   vietnamese: "Vietnamese"
   title_page: "Hotel manager"
+  theformerror_html: "The form contains %{error}."
+  error: "error"
   layouts:
     header:
       title_page: "Hotel Manager"
@@ -32,3 +34,13 @@ en:
     monthly_price: "%{price} $/Month"
     type_room: "Type room"
     furnitures: "Furnitures"
+  users:
+    sign_up: "Sign Up"
+    sign_up_n: "Sign up now!"
+    log_out: "Log out"
+    invalid_email: "Invalid email/password combination"
+    nil: "This user does not exist in the system"
+    welcome: "Welcome to us"
+    profile: "Profile"
+    create_acc: "Create my account"
+    new_user: "New user?"
