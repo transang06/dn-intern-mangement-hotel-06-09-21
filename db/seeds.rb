@@ -16,3 +16,21 @@ User.create!(first_name: "Trần",
     password_confirmation: password,
     activated_at: Time.zone.now)
 end
+
+30.times do |n|
+  name = "Penthouse#{n+1}"
+  Room.create!(name: name,
+    type_room: "Luxury room",
+    status: 0,
+    description: "Relax at the penthouse on the 100th floor")
+end
+room_first = Room.first
+room_first.images.attach(io: File.open(Rails.root.join("app/assets/images/room.jpg")),filename: "room.jpg")
+room_first.images.attach(io: File.open(Rails.root.join("app/assets/images/room2.jpg")),filename: "room2.jpg")
+
+
+rooms = Room.order(:created_at).take(6)
+2.times do
+  name = Faker::Lorem.sentence(word_count: 5)
+  rooms.each { |room| room.furnitures.create!(name: name, quantity: 2) }
+end

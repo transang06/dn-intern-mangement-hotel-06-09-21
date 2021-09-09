@@ -1,0 +1,32 @@
+<% provide :title, @room.name %>
+<div class="container px-4 my-5">
+  <div class="row gx-5">
+    <div class="col">
+      <% @room.images.each do |image| %> 
+      <%= image_tag image, class: "img-fluid rounded m-3" %> 
+      <% end %>
+    </div>
+    <div class="col mx-5">
+      <h1><%= @room.name %></h1>
+      <strong> <%= t "rooms.descriptions" %></strong>
+      <p><%= @room.description %></p>
+      <strong><%= t "rooms.descriptions" %></strong>
+      <ul>
+        <li>
+          <%= t "rooms.hourly_price", price: @room.hourly_price %>
+        </li>
+        <li>
+          <%= t "rooms.day_price", price: @room.day_price %>
+        </li>
+        <li>
+          <%= t "rooms.monthly_price", price: @room.monthly_price %>
+        </li>
+      </ul>
+      <strong><%= t "rooms.type_room" %></strong>
+      <p><%= @room.type_room %></p>
+      <%= @room.discount if @room.discount != 0 %>
+      <strong><%= t "rooms.furnitures" %></strong>
+      <%= render @furnitures %>
+    </div>
+  </div>
+</div>

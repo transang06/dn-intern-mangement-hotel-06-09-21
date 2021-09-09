@@ -40,7 +40,8 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "furnitures", primary_key: "room_id", force: :cascade do |t|
+  create_table "furnitures", force: :cascade do |t|
+    t.integer "room_id", null: false
     t.string "name"
     t.integer "quantity", default: 0
     t.text "description"
@@ -78,7 +79,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "type_room"
     t.boolean "status", default: false
     t.decimal "hourly_price", default: "0.0"
     t.decimal "day_price", default: "0.0"
@@ -130,6 +131,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "furnitures", "rooms"
   add_foreign_key "receipt_details", "receipts"
   add_foreign_key "receipt_details", "rooms"
   add_foreign_key "receipts", "users"

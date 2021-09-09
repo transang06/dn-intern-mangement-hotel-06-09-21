@@ -1,7 +1,10 @@
 en:
+  english: "English"
+  vietnamese: "Vietnamese"
+  title_page: "Hotel manager"
   layouts:
     header:
-      title_page: "Hotel sample"
+      title_page: "Hotel Manager"
       home: "Home"
       about: "About Us"
       help: "Help"
@@ -19,3 +22,13 @@ en:
       title: "Welcome to Contact page"
     help:
       title: "Welcome to Help page"
+  rooms:
+    all_rooms: "All Rooms"
+    not_exist: "This room does not exist"
+    descriptions: "Descriptions"
+    price: "Price"
+    hourly_price: "%{price} $/Hour"
+    day_price: "%{price} $/Day"
+    monthly_price: "%{price} $/Month"
+    type_room: "Type room"
+    furnitures: "Furnitures"
