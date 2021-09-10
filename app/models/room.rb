@@ -3,4 +3,6 @@ class Room < ApplicationRecord
   has_many :furnitures, dependent: :destroy
   has_many :receipts, through: :receipt_details
   has_many_attached :images
+
+  scope :latest, ->{order created_at: :desc}
 end

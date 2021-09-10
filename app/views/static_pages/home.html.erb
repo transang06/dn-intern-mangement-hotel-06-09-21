@@ -1,5 +1,5 @@
-<% provide :title, t("static_pages.home.title") %>
- <div class="all-title-box">
+<% provide :title, t(".title") %>
+<div class="all-title-box">
   <div class="container wrapper-content">
     <div class="row">
       <div class="col-lg-12">
@@ -9,3 +9,8 @@
     </div>
   </div>
 </div>
+<h2 class="my-5"><%= t "rooms.all_rooms" %></h2>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+  <%= render @rooms %> 
+</div>
+<%= paginate @rooms %>

@@ -1,0 +1,15 @@
+<div class="col">
+  <div class="card h-100"> 
+    <% if room.images[0] %>
+      <%= image_tag room.images[0] ,:class => "card-img-top", :alt => room.images[0] %>
+    <% else %>
+      <%= image_tag asset_path("hotel.jpg"), class: "card-img-top", alt: "Hotel" %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= room.name %></h5>
+      <p class="card-text"><%= room.description %></p>
+      <p class="card-text"><%= room.type_room %></p>
+      <%= link_to "Show detail", room ,class: "btn-grad" %>
+    </div>
+  </div>
+</div>
