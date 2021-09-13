@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
     t.integer "receipt_id", null: false
     t.integer "room_id", null: false
     t.datetime "from_time"
-    t.datetime "to_time"
+    t.datetime "end_time"
     t.integer "amount_of_people", default: 0
     t.decimal "into_money"
     t.datetime "created_at", precision: 6, null: false

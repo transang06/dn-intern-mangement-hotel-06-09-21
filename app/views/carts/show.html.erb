@@ -1,0 +1,11 @@
+<% if session[:cart].size == 0 %>
+  <p class="text-center">
+    <%= t "cart.cart_nil_html", link: link_to(t("other.go_back"), root_path) %>
+  </p>
+<% else %>
+  <div class="list-group">
+    <% session[:cart].each do |receipt_detail| %>
+      <%= render "cart_row", receipt_detail: receipt_detail %>
+    <% end %>
+  </div>
+<% end %>

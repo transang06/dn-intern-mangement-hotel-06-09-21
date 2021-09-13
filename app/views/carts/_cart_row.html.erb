@@ -1,0 +1,41 @@
+<% if room receipt_detail["room_id"] %>
+  <div class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">
+        <%= link_to @room.name, @room %>
+      </h5>
+    </div>
+    <div>
+      <%= form_for login_path, remote: true do |f| %>
+      <div class="row mb-2">
+        <div class="col">
+          <%= f.label :from_time, class: "my-2" %>
+          <%= f.datetime_field :from_time, value: parse_time(receipt_detail["from_time"]), class: "form-control", required: true, min: time_current %>
+        </div>
+        <div class="col">
+          <%= f.label :end_time, class: "my-2" %>
+          <%= f.datetime_field :end_time,value: parse_time(receipt_detail["end_time"]), class: "form-control", required: true, min: time_current %>    
+        </div>
+      </div>
+      <%= f.hidden_field :room_id, value: receipt_detail["room_id"] %>
+    <% end %>
+    </div>  
+    <div class="row mb-2">
+      <div class="col">
+        <p class="m-1 my-3">
+          <%= t "cart.rental_period", time: distance_of_time_in_words(receipt_detail["from_time"], receipt_detail["end_time"]) %>
+        </p>
+      </div>
+      <div class="col">
+        <p class="m-1 my-3">
+          <%= t "cart.amount_of_people", people: receipt_detail["amount_of_people"] %>
+        </p>
+      </div>
+        <div class="col">
+        <h5 class="m-1 text-secondary">
+          <%= t "cart.into_money", money: number_to_currency(receipt_detail["into_money"], locale: :vi) %>
+        </h5>
+      </div>
+    </div> 
+  </div>
+<% end %>
