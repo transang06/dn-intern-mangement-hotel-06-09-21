@@ -2,6 +2,8 @@ vi:
   english: "Tiếng Anh"
   vietnamese: "Tiếng Việt"
   title_page: "Quản lý khách sạn"
+  theformerror_html: "Biểu mẫu chứa %{error}."
+  error: "lỗi"
   layouts:
     header:
       title_page: "Hotel Manager"
@@ -32,3 +34,13 @@ vi:
     monthly_price: "%{price} ₫/Tháng"
     type_room: "Loại phòng"
     furnitures: "Nội thất"
+  users:
+    sign_up: "Đăng ký"
+    sign_up_n: "Đăng ký ngay!"
+    log_out: "Đăng xuất"
+    invalid_email: "Kết hợp email / mật khẩu không hợp lệ"
+    nil: "Người dùng này không tồn tại trong hệ thống"
+    welcome: "Chào mừng đến với chúng tôi"
+    profile: "Hồ sơ"
+    create_acc: "Tạo tài khoản của tôi"
+    new_user: "Người dùng mới?"

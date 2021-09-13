@@ -1,1 +1,5 @@
 per_page_18: 18
+validation:
+  max_length_50: 50
+  max_length_255: 25
+  min_length_8: 8
