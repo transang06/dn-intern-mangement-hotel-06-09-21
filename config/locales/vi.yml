@@ -29,9 +29,9 @@ vi:
     not_exist: "Phòng này không tồn tại"
     descriptions: "Mô tả"
     price: "Giá"
-    hourly_price: "%{price} ₫/Giờ"
-    day_price: "%{price} ₫/Ngày"
-    monthly_price: "%{price} ₫/Tháng"
+    hourly_price: "%{price}/Giờ"
+    day_price: "%{price}/Ngày"
+    monthly_price: "%{price}/Tháng"
     type_room: "Loại phòng"
     furnitures: "Nội thất"
   users:
@@ -51,3 +51,8 @@ vi:
     acc_not_acti: "Tài khoản chưa được kích hoạt. Kiểm tra email của bạn để biết liên kết kích hoạt."
     check_mail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     acc_activation: "Kích hoạt tài khoản"
+  other:
+    search: "Search"
+    search_results: "Kết quả tìm kiếm cho từ khóa \"%{key}\""
+    search_not_matching: "Không có kết quả nào phù hợp"
+    language: "Ngôn ngữ"
