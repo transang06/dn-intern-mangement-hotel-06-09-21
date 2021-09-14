@@ -13,13 +13,13 @@
       <strong><%= t "rooms.descriptions" %></strong>
       <ul>
         <li>
-          <%= t "rooms.hourly_price", price: @room.hourly_price %>
+          <%= t "rooms.hourly_price", price: number_to_currency(@room.hourly_price, locale: :vi) %>
         </li>
         <li>
-          <%= t "rooms.day_price", price: @room.day_price %>
+          <%= t "rooms.day_price", price: number_to_currency(@room.day_price, locale: :vi) %>
         </li>
         <li>
-          <%= t "rooms.monthly_price", price: @room.monthly_price %>
+          <%= t "rooms.monthly_price", price: number_to_currency(@room.monthly_price, locale: :vi) %>
         </li>
       </ul>
       <strong><%= t "rooms.type_room" %></strong>
