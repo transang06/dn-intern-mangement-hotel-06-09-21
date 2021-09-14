@@ -29,9 +29,9 @@ en:
     not_exist: "This room does not exist"
     descriptions: "Descriptions"
     price: "Price"
-    hourly_price: "%{price} $/Hour"
-    day_price: "%{price} $/Day"
-    monthly_price: "%{price} $/Month"
+    hourly_price: "%{price}/Hour"
+    day_price: "%{price}/Day"
+    monthly_price: "%{price}/Month"
     type_room: "Type room"
     furnitures: "Furnitures"
   users:
@@ -51,3 +51,8 @@ en:
     acc_not_acti: "Account not activated. Check your email for the activation link."
     check_mail: "Please check your email to activate your account."
     acc_activation: "Account activation"
+  other:
+    search: "Search"
+    search_results: "Search results for \"%{key}\""
+    search_not_matching: "There are no matching results"
+    language: "Language"

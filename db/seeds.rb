@@ -22,9 +22,13 @@ end
 
 30.times do |n|
   name = "Penthouse#{n+1}"
+  price = n*10000
   Room.create!(name: name,
     type_room: "Luxury room",
     status: 0,
+    hourly_price: price,
+    day_price: price*8,
+    monthly_price: price*89,
     description: "Relax at the penthouse on the 100th floor")
 end
 room_first = Room.first
