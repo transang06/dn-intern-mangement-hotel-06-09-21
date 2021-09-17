@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     get "/search", to: "rooms#search"
+    resource :cart, only: :show
+    resources :receipt_details, only: %i(create update destroy)
     resources :users
     resources :rooms
     resources :account_activations, only: :edit

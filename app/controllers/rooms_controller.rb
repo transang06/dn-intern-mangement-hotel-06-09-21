@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :load_room, only: [:show]
+  before_action :load_room, only: :show
 
   def show
     @furnitures = @room.furnitures

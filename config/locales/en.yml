@@ -10,7 +10,7 @@ en:
       home: "Home"
       about: "About Us"
       help: "Help"
-      contact: "Contact Us"
+      contact: "Contact"
     footer:
       title_app: "Hotel sample"
       content_html: "Create © 9/9/2021 %{link} Design By: Hong Thuc & Van Sang"
@@ -51,8 +51,18 @@ en:
     acc_not_acti: "Account not activated. Check your email for the activation link."
     check_mail: "Please check your email to activate your account."
     acc_activation: "Account activation"
+    please_login: "Please login to continue using the service"
   other:
     search: "Search"
     search_results: "Search results for \"%{key}\""
     search_not_matching: "There are no matching results"
     language: "Language"
+    go_back: "go back"
+  cart:
+    rental_period: "Rental period: %{time}"
+    amount_of_people: "Amount of people: %{people}"
+    into_money: "Into money: %{money}"
+    cart_nil_html: "There are no items in your shopping cart. Please %{link} and add some items to your cart."
+    items_in_cart: "%{quantity} Rooms in Cart"
+    add_to_cart: "Add to Cart"
+    add_success: "Add to cart successfully, check cart for details"

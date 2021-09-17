@@ -8,7 +8,7 @@ vi:
     header:
       title_page: "Hotel Manager"
       home: "Trang chủ"
-      about: "Giới thiệu"
+      about: "Về chúng tôi"
       help: "Trợ giúp"
       contact: "Liên hệ"
     footer:
@@ -51,8 +51,18 @@ vi:
     acc_not_acti: "Tài khoản chưa được kích hoạt. Kiểm tra email của bạn để biết liên kết kích hoạt."
     check_mail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
     acc_activation: "Kích hoạt tài khoản"
+    please_login: "Vui lòng đăng nhập để tiếp tục sử dụng dịch vụ"
   other:
-    search: "Search"
+    search: "Tìm kiếm"
     search_results: "Kết quả tìm kiếm cho từ khóa \"%{key}\""
     search_not_matching: "Không có kết quả nào phù hợp"
     language: "Ngôn ngữ"
+    go_back: "quay lại"
+  cart:
+    rental_period: "Thời gian thuê: %{time}"
+    amount_of_people: "Số người: %{people}"
+    into_money: "Thành tiền: %{money}"
+    cart_nil_html: "Không có sản phẩm nào trong giỏ hàng của bạn. Vui lòng %{link} và thêm một số mặt hàng vào giỏ hàng của bạn."
+    items_in_cart: "%{quantity} Phòng trong giỏ hàng"
+    add_to_cart: "Thêm vào giỏ hàng"
+    add_success: "Thêm vào giỏ hàng thành công, kiểm tra giỏ hàng để biết chi tiết"

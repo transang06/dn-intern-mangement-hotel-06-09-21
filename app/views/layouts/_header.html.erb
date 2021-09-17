@@ -58,6 +58,9 @@
         <%= search_field_tag :key, params[:key], class: "form-control me-2", placeholder: "Search", required: true %>
         <%= submit_tag t("other.search"), class: "btn btn-outline-success" %>
       <% end %>
+       <div class="col-xs-6 text-right">
+        <div class="cart-text"><%= render "layouts/cart_text" %></div>
+      </div>
     </div>
   </div>
 </nav>
