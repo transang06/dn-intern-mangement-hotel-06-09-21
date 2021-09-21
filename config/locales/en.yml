@@ -94,6 +94,7 @@ en:
       unknown: "Unknown"
     payment: "Payment"
     history: "Booking history"
+    list: "Booking list"
     table:
       from: "From time"
       to: "To time"
