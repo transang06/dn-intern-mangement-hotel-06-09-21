@@ -56,6 +56,7 @@ vi:
     please_login: "Vui lòng đăng nhập để tiếp tục sử dụng dịch vụ"
     phone: "Điện thoại "
     birth: "Ngày sinh "
+    name: "Tên"
     job_title:
       customer: "Khách hàng"
       admin: "Quản trị viên"
@@ -67,7 +68,8 @@ vi:
     language: "Ngôn ngữ"
     go_back: "quay lại"
   cart:
-    rental_period: "Thời gian thuê: %{time}"
+    rental_period_hour: "Thời gian thuê: %{time}"
+    rental_period: "Thời gian thuê"
     into_money: "Thành tiền: %{money}"
     cart_nil_html: "Không có sản phẩm nào trong giỏ hàng của bạn. Vui lòng %{link} và thêm một số mặt hàng vào giỏ hàng của bạn."
     items_in_cart: "%{quantity} Phòng trong giỏ hàng"
@@ -114,6 +116,10 @@ vi:
     confirm_cancel: "Bạn có chắc chắn muốn hủy đặt chỗ này không? Điều này không thể được hoàn tác, vui lòng cân nhắc!"
     confirm_payment: "Bạn có chắc chắn xác nhận thanh toán và tiến hành đặt phòng không?"
     nil: "Hóa đơn này không tồn tại, vui lòng kiểm tra lại!"
+    amount_unpaid: "Số tiền chưa thanh toán"
+    booking_info: "Thông tin đặt phòng"
+    invoice_info: "Thông tin hóa đơn"
+    customer_info: "Thông tin khách hàng"
   admin:
     admin_dashboard: "Admin Dashboard"
     view_page_user: "Xem trang cho người dùng"
@@ -122,3 +128,7 @@ vi:
     change_failed: "Không thể thay đổi trạng thái đặt chỗ, có vẻ như trạng thái đã được cập nhật"
     confirm_approved: "Bạn có chắc chắn muốn phê duyệt không? Điều này không thể được hoàn tác, vui lòng cân nhắc"
     confirm_reject: "Bạn có chắc chắn muốn từ chối không? Điều này không thể được hoàn tác, vui lòng cân nhắc!"
+    title_mail_approved: "Xác nhận đặt chỗ thành công"
+    title_mail_cancel: "Từ chối đặt chỗ"
+    head_mail_cancel: "Đặt phòng không được chấp thuận, xin lỗi vì trải nghiệm khó chịu này!"
+    head_mail_approced: "Đặt chỗ đã được chấp thuận! Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi."

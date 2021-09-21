@@ -56,6 +56,7 @@ en:
     please_login: "Please login to continue using the service"
     phone: "Phone"
     birth: "Date of Birth"
+    name: "Name"
     job_title:
       customer: "Customer"
       admin: "Admin"
@@ -67,7 +68,8 @@ en:
     language: "Language"
     go_back: "go back"
   cart:
-    rental_period: "Rental period: %{time}"
+    rental_period_hour: "Rental period: %{time}"
+    rental_period: "Rental period"
     into_money: "Into money: %{money}"
     cart_nil_html: "There are no items in your shopping cart. Please %{link} and add some items to your cart."
     items_in_cart: "%{quantity} Rooms in Cart"
@@ -114,6 +116,10 @@ en:
     confirm_cancel: "Are you sure you want to cancel this reservation? This cannot be undone, please consider!"
     confirm_payment : "Are you sure to confirm the payment and proceed with the booking?"
     nil: "This invoice does not exist, please check again!"
+    amount_unpaid: "Amount unpaid"
+    booking_info: "Booking information"
+    invoice_info: "Invoice information"
+    customer_info: "Customer information"
   admin:
     admin_dashboard: "Admin Dashboard"
     view_page_user: "View page for user"
@@ -122,3 +128,7 @@ en:
     change_failed: "Booking status change failed, looks like status has been updated"
     confirm_approved: "Are you sure you want approval? This cannot be undone, please consider!"
     confirm_reject: "Are you sure you want to decline? This cannot be undone, please consider!"
+    title_mail_approved: "Booking confirmation successful"
+    title_mail_cancel: "Refuse booking"
+    head_mail_cancel: "Booking was not approved, sorry for this unpleasant experience!"
+    head_mail_approced: "Booking approved! Thank you for using our service."

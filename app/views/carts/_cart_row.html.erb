@@ -22,7 +22,7 @@
       <div class="row mb-2">
         <div class="col">
           <p class="m-1 my-3">
-            <%= t "cart.rental_period", time: distance_of_time_in_words(cart_row[1]["from_time"], cart_row[1]["end_time"]) %> =
+            <%= t "cart.rental_period_hour", time: distance_of_time_in_words(cart_row[1]["from_time"], cart_row[1]["end_time"]) %> =
             <%= convert_to_hours(cart_row[1]["end_time"], cart_row[1]["from_time"]) %>h
           </p>
           <ul>
