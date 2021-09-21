@@ -59,3 +59,9 @@ input {
 #main-body {
   min-height: 100vh;
 }
+#flash {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 1;
+}
