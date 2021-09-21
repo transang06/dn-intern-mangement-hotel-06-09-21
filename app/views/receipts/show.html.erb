@@ -1,8 +1,8 @@
 <% provide :title, t("receipt.receipts", id: @receipt.id,
-  job_title: current_user.job_title,
+  job_title: t("users.job_title.#{current_user.role}"),
   name: current_user.first_name + " " + current_user.last_name) %>
 <div class="row">
-  <%= content_tag(:h1, t("receipt.receipts", id: @receipt.id, job_title: current_user.job_title,
+  <%= content_tag(:h1, t("receipt.receipts", id: @receipt.id, job_title: t("users.job_title.#{current_user.role}"),
     name: current_user.first_name + " " + current_user.last_name), class: "col") %>
   <%= link_to t("receipt.print_invoice"), "your_link_here", :onclick => "window.print();return false;", class: "col-2 btn-grad"%>
 </div>

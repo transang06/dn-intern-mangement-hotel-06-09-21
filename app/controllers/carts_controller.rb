@@ -35,9 +35,10 @@ class CartsController < ApplicationController
   end
 
   def time_compare from_time, end_time
-    check_time = from_time.to_datetime > DateTime.now
-    check_time &= end_time.to_datetime > DateTime.now
-    check_time &= end_time.to_datetime > from_time.to_datetime
+    one_hour = Settings.hour_1.hour
+    check_time = from_time.to_datetime >= DateTime.now + one_hour
+    check_time &= end_time.to_datetime >= DateTime.now + one_hour
+    check_time &= end_time.to_datetime >= from_time.to_datetime + one_hour
     return if check_time
 
     flash[:danger] = t "cart.date_invalid"
@@ -47,8 +48,7 @@ class CartsController < ApplicationController
   def sp_change
     session[:cart][params[:room_id]] = {
       from_time: params[:from_time],
-      end_time: params[:end_time],
-      people: params[:people]
+      end_time: params[:end_time]
     }
   end
 

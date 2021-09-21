@@ -15,11 +15,7 @@
         </div>
         <div class="col">
           <%= label_tag :end_time, nil, class: "my-2" %>
-          <%= datetime_field_tag :end_time, nil, value: parse_time(cart_row[1]["end_time"]), class: "form-control", required: true, min: time_current %>    
-        </div>
-        <div class="col-2">
-          <%= label_tag :people, nil, class: "my-2" %>
-          <%= number_field_tag  :people, nil, value: cart_row[1]["people"], class: "form-control", required: true, min: 1, max: 20 %>
+          <%= datetime_field_tag :end_time, nil, value: parse_time(cart_row[1]["end_time"]), class: "form-control", required: true, min: time_current(Settings.hour_1.hour) %>   
         </div>
       </div>
       <%= hidden_field_tag :room_id, nil, value: cart_row[0] %>
