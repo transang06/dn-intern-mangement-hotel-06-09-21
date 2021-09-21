@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :working_shifts, through: :working_shift_staffs
   has_one_attached :avatar
 
+  enum role: {customer: 0, admin: 1, staff: 2}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   VALID_PHONE_REGEX = /\d[0-9]\)*\z/.freeze
   attr_accessor :activation_token
