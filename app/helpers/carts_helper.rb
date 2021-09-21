@@ -1,7 +1,6 @@
 module CartsHelper
   def sp_money end_time, from_time
-    total_time = end_time.to_datetime.to_f - from_time.to_datetime.to_f
-    into_money(total_time / Settings.hour_1.hour).round Settings.round_3
+    into_money(convert_to_hours(end_time, from_time))
   end
 
   def into_money  total_time
@@ -13,5 +12,10 @@ module CartsHelper
     else
       (total_time / Settings.hour_24).round(Settings.round_3) * @room.day_price
     end
+  end
+
+  def convert_to_hours end_time, from_time
+    total_time = end_time.to_datetime.to_f - from_time.to_datetime.to_f
+    (total_time / Settings.hour_1.hour).round Settings.round_3
   end
 end

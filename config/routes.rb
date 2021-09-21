@@ -19,5 +19,10 @@ Rails.application.routes.draw do
     resources :users
     resources :rooms
     resources :account_activations, only: :edit
+    resources :receipts, only: %i(index show create) do
+      collection do
+        post "cancel_booking"
+      end
+    end
   end
 end

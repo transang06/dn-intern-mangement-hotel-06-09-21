@@ -65,15 +65,22 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
 
   create_table "receipts", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.integer "room_id", null: false
     t.string "payment"
     t.datetime "check_in"
     t.datetime "check_out"
+    t.datetime "from_time"
+    t.datetime "end_time"
+    t.decimal "hourly_price", default: "0.0"
+    t.decimal "day_price", default: "0.0"
+    t.decimal "monthly_price", default: "0.0"
     t.decimal "into_money"
     t.decimal "paid"
     t.datetime "paid_at"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_receipts_on_room_id"
     t.index ["user_id"], name: "index_receipts_on_user_id"
   end
 
@@ -134,6 +141,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_163725) do
   add_foreign_key "furnitures", "rooms"
   add_foreign_key "receipt_details", "receipts"
   add_foreign_key "receipt_details", "rooms"
+  add_foreign_key "receipts", "rooms"
   add_foreign_key "receipts", "users"
   add_foreign_key "working_shift_staffs", "users"
   add_foreign_key "working_shift_staffs", "working_shifts"
