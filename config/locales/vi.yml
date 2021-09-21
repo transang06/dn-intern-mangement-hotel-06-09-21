@@ -35,6 +35,7 @@ vi:
     type_room: "Loại phòng"
     furnitures: "Nội thất"
     room: "Phòng"
+    amount_of_people: "Số người: %{people}"
   users:
     sign_up: "Đăng ký"
     sign_up_n: "Đăng ký ngay!"
@@ -55,6 +56,10 @@ vi:
     please_login: "Vui lòng đăng nhập để tiếp tục sử dụng dịch vụ"
     phone: "Điện thoại "
     birth: "Ngày sinh "
+    job_title:
+      customer: "Khách hàng"
+      admin: "Quản trị viên"
+      staff: "Nhân Viên"
   other:
     search: "Tìm kiếm"
     search_results: "Kết quả tìm kiếm cho từ khóa \"%{key}\""
@@ -63,7 +68,6 @@ vi:
     go_back: "quay lại"
   cart:
     rental_period: "Thời gian thuê: %{time}"
-    amount_of_people: "Số người: %{people}"
     into_money: "Thành tiền: %{money}"
     cart_nil_html: "Không có sản phẩm nào trong giỏ hàng của bạn. Vui lòng %{link} và thêm một số mặt hàng vào giỏ hàng của bạn."
     items_in_cart: "%{quantity} Phòng trong giỏ hàng"
@@ -108,3 +112,7 @@ vi:
     payment_by: "Thanh toán bằng: "
     confirm_cancel: "Bạn có chắc chắn muốn hủy đặt chỗ này không? Điều này không thể được hoàn tác, vui lòng cân nhắc!"
     confirm_payment: "Bạn có chắc chắn xác nhận thanh toán và tiến hành đặt phòng không?"
+  admin:
+    admin_dashboard: "Admin Dashboard"
+    view_page_user: "Xem trang cho người dùng"
+    not_have_receipt: "Hiện tại không có hóa đơn nào để hiển thị"

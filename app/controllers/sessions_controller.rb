@@ -21,6 +21,8 @@ class SessionsController < ApplicationController
   def pass_authen user
     if user.activated_at?
       log_in user
+      return redirect_to admin_root_path if user.admin?
+
       redirect_back_or user
     else
       flash[:warning] = t "users.acc_not_acti"

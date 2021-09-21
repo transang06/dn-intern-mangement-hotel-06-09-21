@@ -15,4 +15,8 @@ module ApplicationHelper
   def room room_id
     @room = Room.find_by(id: room_id)
   end
+
+  def active_class controller, action
+    current_page?(controller: controller, action: action) ? "active" : ""
+  end
 end

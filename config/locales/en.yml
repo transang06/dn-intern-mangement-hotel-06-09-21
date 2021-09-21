@@ -35,6 +35,7 @@ en:
     type_room: "Type room"
     furnitures: "Furnitures"
     room: "Room"
+    amount_of_people: "Amount of people: %{people}"
   users:
     sign_up: "Sign Up"
     sign_up_n: "Sign up now!"
@@ -55,6 +56,10 @@ en:
     please_login: "Please login to continue using the service"
     phone: "Phone"
     birth: "Date of Birth"
+    job_title:
+      customer: "Customer"
+      admin: "Admin"
+      staff: "Staff"
   other:
     search: "Search"
     search_results: "Search results for \"%{key}\""
@@ -63,7 +68,6 @@ en:
     go_back: "go back"
   cart:
     rental_period: "Rental period: %{time}"
-    amount_of_people: "Amount of people: %{people}"
     into_money: "Into money: %{money}"
     cart_nil_html: "There are no items in your shopping cart. Please %{link} and add some items to your cart."
     items_in_cart: "%{quantity} Rooms in Cart"
@@ -108,3 +112,7 @@ en:
     payment_by: "Payment by: "
     confirm_cancel: "Are you sure you want to cancel this reservation? This cannot be undone, please consider!"
     confirm_payment : "Are you sure to confirm the payment and proceed with the booking?"
+  admin:
+    admin_dashboard: "Admin Dashboard"
+    view_page_user: "View page for user"
+    not_have_receipt: "There are currently no invoices to display"

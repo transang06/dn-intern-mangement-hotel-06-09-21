@@ -28,4 +28,11 @@ class ApplicationController < ActionController::Base
   def init_cart
     session[:cart] ||= {}
   end
+
+  def is_admin?
+    return if current_user.admin?
+
+    flash[:warning] = t "receipt.not_permissions"
+    redirect_to root_url
+  end
 end
