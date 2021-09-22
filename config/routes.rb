@@ -24,5 +24,8 @@ Rails.application.routes.draw do
         post "cancel_booking"
       end
     end
+    namespace :admin do
+      root "admins#index"
+    end
   end
 end
