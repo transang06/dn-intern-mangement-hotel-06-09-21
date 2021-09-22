@@ -1,4 +1,5 @@
 <% provide :title, t("admin.admin_dashboard") %>
+<h3><%= t "receipt.list" %></h3>
 <% unless @receipts.any? %>
   <h3 class="text-center"><%= t "admin.not_have_receipt" %></h3>
 <% else %>
@@ -6,6 +7,8 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col"><%= t "rooms.room" %></th>
+        <th scope="col"><%= t "users.job_title.customer" %></th>
         <th scope="col"><%= t "receipt.table.from" %></th>
         <th scope="col"><%= t "receipt.table.to" %></th>
         <th scope="col"><%= t "receipt.table.into_money" %></th>
@@ -17,7 +20,7 @@
     </thead>
     <tbody>
       <% @receipts.each_with_index do |receipt, index| %>
-        <%= render "receipts/receipt", receipt: receipt, index: index %>
+        <%= render "receipt", receipt: receipt, index: index %>
       <% end %>
     </tbody>
   </table>

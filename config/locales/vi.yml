@@ -94,6 +94,7 @@ vi:
       unknown: "không xác định"
     payment: "Thanh toán"
     history: "Lịch sử đặt chỗ"
+    list: "Danh sách đặt chỗ"
     table:
       from: "Từ lúc"
       to: "Đến lúc"
