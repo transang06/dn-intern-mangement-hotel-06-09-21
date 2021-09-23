@@ -48,7 +48,7 @@ class ReceiptsController < ApplicationController
     @receipt.into_money = into_money
     @receipt.paid = into_money
     @receipt.paid_at = DateTime.now
-    @receipt.save!
+    @receipt.save
   end
 
   def load_room_in_cart
