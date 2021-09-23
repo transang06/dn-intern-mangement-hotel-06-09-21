@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     get "/search", to: "rooms#search"
     resources :carts, only: :index do
       collection do
-        post "add"
-        post "change"        
-        delete "remove"
+        post :add
+        post :change    
+        delete :remove
       end
     end
     resources :users
@@ -21,15 +21,15 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :receipts, only: %i(index show create) do
       collection do
-        post "cancel_booking"
+        post :cancel_booking
       end
     end
     namespace :admin do
       root "admins#index"
       resources :receipts, only: %i(edit update) do
         collection do
-          put "approved"
-          put "reject"
+          put :approved
+          put :reject
         end
       end
     end

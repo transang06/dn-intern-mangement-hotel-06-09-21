@@ -1,5 +1,6 @@
 class Admin::ReceiptsController < Admin::AdminsController
-  before_action :load_receipt, :check_status, only: %i(approved reject)
+  before_action :load_receipt, :check_status, :load_user,
+                only: %i(approved reject)
   after_action :format_js, only: %i(approved reject)
 
   def edit; end
@@ -8,6 +9,7 @@ class Admin::ReceiptsController < Admin::AdminsController
 
   def approved
     @receipt.approved!
+    ReceiptMailer.booking_approval(@user, @receipt).deliver_now
     flash.now[:success] = t "admin.change_success"
   rescue StandardError
     flash.now[:danger] = t("admin.change_failed")
@@ -15,6 +17,7 @@ class Admin::ReceiptsController < Admin::AdminsController
 
   def reject
     @receipt.cancelled_by_admin!
+    ReceiptMailer.cancel_booking(@user, @receipt).deliver_now
     flash.now[:success] = t "admin.change_success"
   rescue StandardError
     flash.now[:danger] = t("admin.change_failed")
@@ -27,6 +30,14 @@ class Admin::ReceiptsController < Admin::AdminsController
     return if @receipt
 
     flash[:warning] = t "receipt.nil"
+    redirect_to admin_root_path
+  end
+
+  def load_user
+    @user = User.find_by id: @receipt.user_id
+    return if @user
+
+    flash[:danger] = t "users.nil"
     redirect_to admin_root_path
   end
 
