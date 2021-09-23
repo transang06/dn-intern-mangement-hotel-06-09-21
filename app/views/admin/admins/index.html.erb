@@ -20,7 +20,9 @@
     </thead>
     <tbody>
       <% @receipts.each_with_index do |receipt, index| %>
-        <%= render "receipt", receipt: receipt, index: index %>
+        <tr id="receipt-<%= receipt.id %>">
+          <%= render "receipt", receipt: receipt, index: index %>
+        </tr>
       <% end %>
     </tbody>
   </table>

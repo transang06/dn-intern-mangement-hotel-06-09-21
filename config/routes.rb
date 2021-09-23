@@ -26,6 +26,12 @@ Rails.application.routes.draw do
     end
     namespace :admin do
       root "admins#index"
+      resources :receipts, only: %i(edit update) do
+        collection do
+          put "approved"
+          put "reject"
+        end
+      end
     end
   end
 end
