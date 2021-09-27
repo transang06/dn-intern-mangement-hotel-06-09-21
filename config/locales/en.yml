@@ -63,10 +63,13 @@ en:
       staff: "Staff"
   other:
     search: "Search"
-    search_results: "Search results for \"%{key}\""
+    search_results: "Search results"
     search_not_matching: "There are no matching results"
     language: "Language"
     go_back: "go back"
+    price_from: "Price from"
+    price_to: "To"
+    search_name: "Furniture, type room, name,..."
   cart:
     rental_period_hour: "Rental period: %{time}"
     rental_period: "Rental period"
@@ -83,6 +86,7 @@ en:
     delete: "Delete"
     not_exist_room: "This room does not exist in your cart, please check again"
     date_invalid: "Invalid date and time format, please try again"
+    list: "Room list in cart"
   receipt:
     booking_successful: "Đặt phòng thành công, chúng tôi sẽ sớm xác nhận thông tin và thông báo cho bạn qua email. Cảm ơn vì đã chọn chúng tôi"
     booking_fail: "Có điều gì đó xảy ra trong khi đặt chỗ, xin lỗi vì sự bất tiện này"
