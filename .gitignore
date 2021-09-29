@@ -1,12 +1,10 @@
 *.rbc
 capybara-*.html
-.rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
 /public/system
 /coverage/
-/spec/tmp
 *.orig
 rerun.txt
 pickle-email-*.html
@@ -83,7 +81,6 @@ yarn-debug.log*
 /test/
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
-/spec
 
 config/settings.local.yml
 config/settings/*.local.yml
@@ -91,3 +88,4 @@ config/environments/*.local.yml
 
 # Ignore application configuration
 /config/application.yml
+coverage

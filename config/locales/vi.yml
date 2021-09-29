@@ -124,6 +124,9 @@ vi:
     booking_info: "Thông tin đặt phòng"
     invoice_info: "Thông tin hóa đơn"
     customer_info: "Thông tin khách hàng"
+    cancel_suc: "Hủy thành công"
+    not_exist: "Hóa đơn không tồn tại"
+    invalid_status: "Trạng thái hóa đơn không hợp lệ"
   admin:
     admin_dashboard: "Admin Dashboard"
     view_page_user: "Xem trang cho người dùng"
