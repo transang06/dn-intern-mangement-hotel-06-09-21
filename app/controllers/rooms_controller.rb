@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
 
   def show
     @furnitures = @room.furnitures
+    @time_busy = @room.receipts.status_approved.select("from_time", "end_time")
   end
 
   def search
