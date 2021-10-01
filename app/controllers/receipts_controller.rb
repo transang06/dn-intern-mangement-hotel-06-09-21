@@ -29,8 +29,18 @@ class ReceiptsController < ApplicationController
 
   def cancel_booking
     @receipt = current_user.receipts.find_by id: params[:id]
-    @receipt.cancelled_by_you! if @receipt.wait?
-    redirect_to @receipt
+    if @receipt
+      if @receipt.wait?
+        @receipt.cancelled_by_you!
+        flash[:success] = t "receipt.cancel_suc"
+      else
+        flash[:warning] = t "receipt.invalid_status"
+      end
+      redirect_to @receipt
+    else
+      flash[:danger] = t "receipt.not_exist"
+      redirect_to receipts_path
+    end
   end
 
   private

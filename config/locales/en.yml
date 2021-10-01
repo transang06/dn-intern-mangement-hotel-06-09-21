@@ -124,6 +124,9 @@ en:
     booking_info: "Booking information"
     invoice_info: "Invoice information"
     customer_info: "Customer information"
+    cancel_suc: "Cancellation successful"
+    not_exist: "Booking does not exist"
+    invalid_status: "Invalid invoice status"
   admin:
     admin_dashboard: "Admin Dashboard"
     view_page_user: "View page for user"

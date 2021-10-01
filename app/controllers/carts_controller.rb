@@ -17,21 +17,19 @@ class CartsController < ApplicationController
 
   def remove
     session[:cart].delete params[:room_id]
-    flash[:danger] = t "cart.delete_success"
+    flash[:success] = t "cart.delete_success"
     redirect_to carts_path
   end
 
   private
 
   def check_time_vali
-    begin
-      from_time = params[:from_time].to_datetime
-      end_time = params[:end_time].to_datetime
-    rescue NoMethodError
-      flash[:danger] = t "cart.date_invalid"
-      redirect_to carts_path
-    end
+    from_time = params[:from_time].to_datetime
+    end_time = params[:end_time].to_datetime
     time_compare from_time, end_time
+  rescue StandardError
+    flash[:danger] = t "cart.date_invalid"
+    redirect_to carts_path
   end
 
   def time_compare from_time, end_time
