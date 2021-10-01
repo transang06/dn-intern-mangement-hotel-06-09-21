@@ -87,6 +87,7 @@ vi:
     not_exist_room : "Phòng này không tồn tại trong giỏ hàng của bạn, hãy kiểm tra lại"
     date_invalid: "Invalid date and time format, please try again"
     list: "Danh sách phòng trong giỏ hàng"
+    booked: "Phòng này đã có người đặt, vui lòng chọn thời gian khác"
   receipt:
     booking_successful: "Đặt phòng thành công, chúng tôi sẽ sớm xác nhận thông tin và thông báo cho bạn qua email. Cảm ơn vì đã chọn chúng tôi"
     booking_fail: "Có điều gì đó xảy ra trong khi đặt chỗ, xin lỗi vì sự bất tiện này"

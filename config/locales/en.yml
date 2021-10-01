@@ -87,9 +87,10 @@ en:
     not_exist_room: "This room does not exist in your cart, please check again"
     date_invalid: "Invalid date and time format, please try again"
     list: "Room list in cart"
+    booked: "This room is already booked by someone, please choose another time"
   receipt:
-    booking_successful: "Đặt phòng thành công, chúng tôi sẽ sớm xác nhận thông tin và thông báo cho bạn qua email. Cảm ơn vì đã chọn chúng tôi"
-    booking_fail: "Có điều gì đó xảy ra trong khi đặt chỗ, xin lỗi vì sự bất tiện này"
+    booking_successful: "Booking is successful, we will soon confirm the information and notify you by email. Thank you for choosing us"
+    booking_fail: "Something happened during the booking, sorry for the inconvenience"
     not_permissions: "You have just been redirected because you do not have enough permissions to access"
     status_bill:
       wait: "Wait for confirmation"

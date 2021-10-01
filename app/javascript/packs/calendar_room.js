@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'prev,next'
     },
-    timeZone: 'UTC',
+    timeZone: 'local',
     initialView: 'dayGridMonth',
     events: `${room_id}.json`,
     selectable: true,
