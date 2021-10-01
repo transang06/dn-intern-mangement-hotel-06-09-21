@@ -42,10 +42,10 @@ RSpec.describe RoomsController, type: :controller do
       end
 
       it "assigns @rooms exist" do
-        result = Room.name_rooms(params[:key])
-                      .price_min(params[:min])
-                      .price_max(params[:max])
-                      .rooms_not_in(assigns(:room_ids_busy))
+        result = Room.name_has(params[:key])
+                      .price_greater(params[:min])
+                      .price_less(params[:max])
+                      .not_in(assigns(:room_ids_busy))
         expect(assigns(:rooms)) == result
       end
     end
