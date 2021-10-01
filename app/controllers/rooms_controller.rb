@@ -7,10 +7,10 @@ class RoomsController < ApplicationController
   end
 
   def search
-    @rooms = Room.name_rooms(params[:key])
-                 .price_min(params[:min])
-                 .price_max(params[:max])
-                 .rooms_not_in(@room_ids_busy)
+    @rooms = Room.name_has(params[:key])
+                 .price_greater(params[:min])
+                 .price_less(params[:max])
+                 .not_in(@room_ids_busy)
                  .distinct.page(params[:page]).per Settings.per_page_18
     render "static_pages/home"
   end

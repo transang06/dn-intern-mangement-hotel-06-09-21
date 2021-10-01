@@ -29,18 +29,18 @@ User.create!(first_name: "Trần",
 end
 
 30.times do |n|
-  name = "Penthouse#{n+1}"
+  name = Faker::House.room
   price = n*10000
   room = Room.create!(name: name,
-    type_room: "Luxury room",
+    type_room: Faker::Appliance.brand,
     status: 0,
     hourly_price: price,
     day_price: price*8,
     monthly_price: price*89,
-    description: "Relax at the penthouse on the 100th floor")
+    description: Faker::Restaurant.description)
     room.images.attach(io: File.open(Rails.root.join("app/assets/images/room.jpg")),filename: "room.jpg")
     room.images.attach(io: File.open(Rails.root.join("app/assets/images/room2.jpg")),filename: "room2.jpg")
 end
 
 rooms = Room.order(:created_at).take(10)
-rooms.each { |room| room.furnitures.create!(name: "Dieu hoa", quantity: 2) }
+rooms.each { |room| room.furnitures.create!(name: Faker::House.furniture, quantity: 2, description: Faker::Restaurant.description)}
