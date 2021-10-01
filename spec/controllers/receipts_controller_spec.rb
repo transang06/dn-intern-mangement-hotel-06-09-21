@@ -5,6 +5,7 @@ RSpec.describe ReceiptsController, type: :controller do
   let!(:receipt) {FactoryBot.create :receipt, user_id: user.id}
   let!(:receipts) {user.receipts}
 
+  include_examples "login example"
   before{log_in user}
   
   describe "GET receipts#index" do
