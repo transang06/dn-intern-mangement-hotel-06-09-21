@@ -9,6 +9,7 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.decimal :monthly_price, default: 0
       t.text :description
       t.decimal :discount, default: 0
+      t.integer :amount_of_people, default: 0
 
       t.timestamps
     end
