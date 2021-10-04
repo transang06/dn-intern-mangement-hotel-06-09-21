@@ -4,6 +4,7 @@ class RoomsController < ApplicationController
 
   def show
     @furnitures = @room.furnitures
+    @time_busy = @room.receipts.status_approved.select :from_time, :end_time
   end
 
   def search
@@ -29,6 +30,6 @@ class RoomsController < ApplicationController
     @room_ids_busy = Receipt.status_approved
                             .on_busy_from(params[:from_time])
                             .on_busy_to(params[:end_time])
-                            .select("room_id").distinct
+                            .select(:room_id).distinct
   end
 end

@@ -14,6 +14,10 @@ RSpec.describe RoomsController, type: :controller do
       it "assigns @room" do
         expect(assigns(:room)).to eq room
       end
+
+      it "assigns @time_busy" do
+        expect(assigns(:time_busy)).to eq room.receipts.status_approved.select(:from_time, :end_time)
+      end
   
       it "assigns @furnitures for room" do
         expect(assigns(:furnitures)).to eq room.furnitures
