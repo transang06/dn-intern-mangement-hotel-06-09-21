@@ -16,6 +16,7 @@ Rails.application.routes.draw do
         delete :remove
       end
     end
+    devise_for :users
     resources :users
     resources :rooms
     resources :account_activations, only: :edit

@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :receipts, dependent: :destroy
   has_many :working_shift_staffs, dependent: :destroy
   has_many :receipt_details, through: :receipts
@@ -21,7 +25,6 @@ class User < ApplicationRecord
     uniqueness: true
   validates :password, presence: true, length:
     {minimum: Settings.validation.min_length_8}, allow_nil: true
-  has_secure_password
   before_save{email.downcase!}
   before_create :create_activation_digest
 
