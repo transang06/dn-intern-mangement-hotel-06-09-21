@@ -24,25 +24,4 @@ RSpec.describe UsersController, type: :controller do
       it {expect(response).to redirect_to(root_path)}
     end
   end
-
-  describe "GET users#new" do
-    context "success when valid attributes" do
-      before{get :new}
-      
-      it "assigns @user" do
-        expect(assigns(:user)) == User.new
-      end
-
-      it {expect(response).to render_template(:new)}
-    end
-  end
-
-  describe "POST users#create" do
-    let(:user_params) {FactoryBot.build(:user).as_json}
-    context "fail when invalid attributes" do
-      before{post :create, params: {user: user_params}}
-
-      it {expect(response).to render_template(:new)}
-    end
-  end
 end

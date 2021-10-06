@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     get "static_pages/contact"
     get "static_pages/about"
     get "static_pages/help"
-    get "/signup", to: "users#new"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
@@ -17,6 +16,9 @@ Rails.application.routes.draw do
       end
     end
     devise_for :users
+    as :user do
+      get "signup" => "devise/registrations#new"
+    end
     resources :users
     resources :rooms
     resources :account_activations, only: :edit

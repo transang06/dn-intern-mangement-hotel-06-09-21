@@ -2,6 +2,19 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   before_action :set_locale, :init_cart
 
+  protect_from_forgery with: :exception
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    added_attrs = [:last_name, :first_name, :email, :phone,
+                  :password, :password_confirmation, :date_of_birth]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  end
+
   private
 
   def set_locale
