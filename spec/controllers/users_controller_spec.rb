@@ -2,6 +2,7 @@ require "rails_helper"
 
 RSpec.describe UsersController, type: :controller do
   let!(:user) {FactoryBot.create :user}
+  before{sign_in(user)}
 
   describe "GET users#show" do
     context "success when valid attributes" do

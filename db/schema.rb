@@ -95,11 +95,6 @@ ActiveRecord::Schema.define(version: 2021_10_04_213051) do
     t.text "description"
     t.string "identifier"
     t.integer "role", default: 0
-    t.string "remember_digest"
-    t.string "activation_digest"
-    t.datetime "activated_at"
-    t.string "reset_digest"
-    t.datetime "reset_sent_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email", default: "", null: false
@@ -112,6 +107,10 @@ ActiveRecord::Schema.define(version: 2021_10_04_213051) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

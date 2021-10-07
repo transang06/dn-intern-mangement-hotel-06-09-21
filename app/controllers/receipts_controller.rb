@@ -1,6 +1,6 @@
 class ReceiptsController < ApplicationController
   include CartsHelper
-  before_action :store_location, :logged_in_user
+  before_action :authenticate_user!
   before_action :load_room_in_cart, :load_room, :check_time_busy, only: :create
 
   def index
