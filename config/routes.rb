@@ -4,9 +4,6 @@ Rails.application.routes.draw do
     get "static_pages/contact"
     get "static_pages/about"
     get "static_pages/help"
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
     get "/search", to: "rooms#search"
     resources :carts, only: :index do
       collection do
@@ -17,7 +14,10 @@ Rails.application.routes.draw do
     end
     devise_for :users
     as :user do
-      get "signup" => "devise/registrations#new"
+      get "signup", to: "devise/registrations#new"
+      get "login", to: "devise/sessions#new"
+      post "login", to: "devise/sessions#create"
+      delete "logout", to: "devise/sessions#destroy"
     end
     resources :users
     resources :rooms

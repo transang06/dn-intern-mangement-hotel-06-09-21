@@ -7,7 +7,7 @@ FactoryBot.define do
     last_name {Faker::Name.last_name}
     phone {Faker::PhoneNumber.phone_number}
     address {Faker::Address.full_address}
-    activated_at {Time.zone.now}
+    confirmed_at {Time.zone.now}
     role {1}
   end
 end
